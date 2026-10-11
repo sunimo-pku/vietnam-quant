@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Generated data and outputs; existing root snapshots remain tracked
+/data/raw/
+/data/processed/
+/outputs/
+/logs/
