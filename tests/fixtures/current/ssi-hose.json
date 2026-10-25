@@ -1,0 +1,30 @@
+{
+  "code": "SUCCESS",
+  "message": "Call API /stock/exchange/hose successful",
+  "data": [
+    {
+      "adminStatus": "NRM",
+      "exchange": "hose",
+      "stockSymbol": "AAA",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "N"
+    },
+    {
+      "adminStatus": "WFR",
+      "exchange": "hose",
+      "stockSymbol": "HVN",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "N"
+    },
+    {
+      "adminStatus": "WID",
+      "exchange": "hose",
+      "stockSymbol": "VPH",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "N"
+    }
+  ]
+}

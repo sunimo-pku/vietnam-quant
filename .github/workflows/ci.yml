@@ -1,0 +1,47 @@
+name: Python checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-checks:
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: "1"
+      VN_STATUS_NO_PAUSE: "1"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.13"]
+    defaults:
+      run:
+        working-directory: 项目 测试
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: 项目 测试
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: 项目 测试/pyproject.toml
+      - run: python -m pip install -e '.[dev]'
+      # Research collectors retain their existing style during staged migration.
+      - run: python -m ruff check src/vietnam_quant/current tests/test_current.py tests/test_current_update.py tests/test_bootstrap.py scripts/bootstrap.py
+      - run: python -m ruff format --check src/vietnam_quant/current tests/test_current.py tests/test_current_update.py tests/test_bootstrap.py scripts/bootstrap.py
+      - run: python -m unittest discover -s tests -v
+      - run: vn-status --help
+      - run: vn-status --output outputs/ci-replay current-report --from-run tests/fixtures/current
+      - name: Windows one-click setup and offline export
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: call "更新股票状态.bat" --from-run tests/fixtures/current --output outputs/launcher-test
+      - name: macOS/Linux one-click setup and offline export
+        if: runner.os != 'Windows'
+        shell: bash
+        run: bash "更新股票状态.command" --from-run tests/fixtures/current --output outputs/launcher-test

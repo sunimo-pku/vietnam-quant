@@ -1,0 +1,11 @@
+{
+  "output_dir": "outputs/current-status",
+  "request_interval_seconds": 1.5,
+  "timeout_seconds": 30,
+  "max_attempts": 3,
+  "backoff_seconds": 2,
+  "max_retry_wait_seconds": 60,
+  "dnse_batch_size": 100,
+  "max_data_age_days": 7,
+  "verify_exchange_directory": true
+}

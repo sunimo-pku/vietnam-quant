@@ -1,0 +1,22 @@
+{
+  "code": "SUCCESS",
+  "message": "Call API /stock/exchange/upcom successful",
+  "data": [
+    {
+      "adminStatus": "RES",
+      "exchange": "upcom",
+      "stockSymbol": "ACM",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "RT"
+    },
+    {
+      "adminStatus": "NRM",
+      "exchange": "upcom",
+      "stockSymbol": "XMC",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "N"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": {
+    "GetKrxStockInfoBySymbols": {
+      "si": [
+        {
+          "symbol": "AAA",
+          "marketId": 6,
+          "symbolAdminStatusCode": 3,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T08:33:00.049Z"
+        },
+        {
+          "symbol": "ACM",
+          "marketId": 8,
+          "symbolAdminStatusCode": 4,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T08:00:01.588Z"
+        },
+        {
+          "symbol": "AME",
+          "marketId": 7,
+          "symbolAdminStatusCode": 2,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T07:45:00.782Z"
+        },
+        {
+          "symbol": "ECI",
+          "marketId": 7,
+          "symbolAdminStatusCode": 0,
+          "symbolTradingMethodStatusCode": 4,
+          "symbolTradingSanctionStatusCode": 2,
+          "securityStatus": 1,
+          "tradingTime": "2026-10-23T07:45:00.829Z"
+        },
+        {
+          "symbol": "HVN",
+          "marketId": 6,
+          "symbolAdminStatusCode": 5,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T08:33:11.349Z"
+        },
+        {
+          "symbol": "VPH",
+          "marketId": 6,
+          "symbolAdminStatusCode": 6,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T07:45:05.82Z"
+        },
+        {
+          "symbol": "XMC",
+          "marketId": 8,
+          "symbolAdminStatusCode": 3,
+          "symbolTradingMethodStatusCode": 1,
+          "symbolTradingSanctionStatusCode": 1,
+          "securityStatus": 2,
+          "tradingTime": "2026-10-23T08:00:02.007Z"
+        }
+      ]
+    }
+  }
+}

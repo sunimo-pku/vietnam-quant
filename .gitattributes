@@ -1,0 +1,12 @@
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.command text eol=lf
+*.bat text eol=crlf
+
+# Preserve the original crawler baseline byte for byte.
+/HNX.py -text
+"/HOSE_最终1.py" -text
+"/爬公告BCG.py" -text
+"/爬所有公告cafeF.py" -text

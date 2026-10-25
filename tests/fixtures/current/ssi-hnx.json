@@ -1,0 +1,22 @@
+{
+  "code": "SUCCESS",
+  "message": "Call API /stock/exchange/hnx successful",
+  "data": [
+    {
+      "adminStatus": "CTR",
+      "exchange": "hnx",
+      "stockSymbol": "AME",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "N"
+    },
+    {
+      "adminStatus": "C&R",
+      "exchange": "hnx",
+      "stockSymbol": "ECI",
+      "stockType": "s",
+      "tradingDate": "20261023",
+      "tradingStatus": "S"
+    }
+  ]
+}
