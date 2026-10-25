@@ -15,6 +15,25 @@
 状态包括监管状态、SSI 交易状态、DNSE 交易方式、DNSE 证券交易状态及停牌标志。
 表内保留来源代码，不自行增加判断或推导标签。各列含义见[状态说明](docs/status-schema.md)。
 
+## 运行结果示例
+
+下面摘自一次真实运行生成的 `status.csv`，保留导出文件的八列及原始值。
+该次结果共 **1,519 只股票**，数据所属交易日为 **2026-10-23**；这里只展示六行，
+用于说明结果样式，不代表这些股票现在的状态。
+
+| trade_date | market | symbol | ssi_admin_status | ssi_trading_status | dnse_trading_method_status | dnse_trading_sanction_status | dnse_security_status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-10-23 | HOSE | AAA | NRM | N | 1 | 1 | 2 |
+| 2026-10-23 | HOSE | APG | WFR | N | 1 | 1 | 2 |
+| 2026-10-23 | HOSE | ABS | CTR | N | 1 | 1 | 2 |
+| 2026-10-23 | HNX | BNA | CTR | S | 1 | 2 | 1 |
+| 2026-10-23 | UPCOM | ACM | RES | RT | 1 | 1 | 2 |
+| 2026-10-23 | UPCOM | ANI | NRM | ST | 5 | 1 | 2 |
+
+例如，监管列中的 `WFR` 表示财务报告相关警告，`CTR` 表示受控；SSI 交易状态中的
+`S` 表示暂停交易。因此，示例中的 APG 是警告状态，BNA 同时呈现受控和暂停交易。
+各列分别表达不同信息，完整代码含义及尚待确认的映射见[状态说明](docs/status-schema.md)。
+
 ## 开始使用
 
 1. 将整个项目文件夹保存到电脑，先解压，再运行。
